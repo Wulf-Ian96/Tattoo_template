@@ -1,0 +1,39 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 0;
+}
+
+.artist_avatar {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+.artist-name {
+  margin-top: 1rem;
+}
+
+.artist-description {
+  margin-top: 1rem;
+  padding: 0 2rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.card-btn {
+  margin: 2rem;
+  font-size: 1rem;
+  padding: 0.35rem 0.5rem;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 10px;
+  align-self: flex-start;
+}
+/* Media queries */
+
+@media screen and (min-width: 960px) {
+  .card-container {
+    max-width: 400px;
+  }
+}

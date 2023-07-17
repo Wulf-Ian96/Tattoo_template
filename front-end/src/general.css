@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* palette */
+  --main-bg-color: #241a19;
+  --secondary-bg-color: #d0916b;
+
+  --light-font: #e3cfba;
+  --light-font-50: #e3cfba23;
+  --dark-font: #241a19;
+
+  --accent: #a58675;
+  /* standard alignments */
+}
+/* containers */
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+}

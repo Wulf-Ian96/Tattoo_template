@@ -1,0 +1,74 @@
+.landing-container {
+  background-color: #241a19;
+  height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  color: var(--light-font);
+}
+
+.landing-title {
+  padding: 1rem;
+  font-size: clamp(3rem, 4vw, 5rem);
+  color: var(--light-font);
+  z-index: 1;
+}
+
+.img-container {
+  background-image: url(../assets/images/landing.jpg);
+  margin-top: 3rem;
+  height: 20vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+
+  z-index: 1;
+}
+
+.landing-about {
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
+  line-height: 1.6;
+  letter-spacing: 1px;
+  padding: 1rem;
+}
+
+.landing-btn {
+  background-color: var(--secondary-bg-color);
+  border: none;
+  height: 20px;
+  width: 40px;
+}
+.button-desc {
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
+}
+@media screen and (min-width: 960px) {
+  .landing-container {
+    height: 100vh;
+  }
+  .img-container {
+    height: 34vh;
+  }
+  .landing-about,
+  .landing-title {
+    padding: 2rem 4rem;
+  }
+  .button-desc {
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+    margin-right: 2rem;
+  }
+  /* original class in general styles */
+  .flex-container {
+    margin: 0 3rem;
+    width: fit-content;
+  }
+}
+
+/* media queries for height */
+
+@media screen and (max-height: 800px) {
+  .landing-container {
+    height: fit-content;
+  }
+}

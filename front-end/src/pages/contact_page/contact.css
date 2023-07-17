@@ -1,0 +1,25 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-bg-color);
+  color: var(--light-font);
+}
+
+.contact-title {
+  font-size: clamp(3rem, 5vw, 5rem);
+  margin-bottom: 3rem;
+}
+
+.contact-content {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+@media screen and (min-width: 960px) {
+  .contact-container {
+    height: 100vh;
+    width: 50vw;
+  }
+}

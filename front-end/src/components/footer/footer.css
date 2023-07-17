@@ -1,0 +1,5 @@
+.footer-container {
+  display: flex;
+  height: 5vh;
+  background-color: var(--secondary-bg-color);
+}
