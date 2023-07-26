@@ -1,25 +1,18 @@
 import React from "react";
-import Landing from "./pages/landing";
-import Header from "./components/header/header";
-import Artists from "./pages/artists_page/artists";
-import "./components/artist_card/cardStyles.css";
-import "./general.css";
-import "./pages/Faq_page/faq.css";
-import "./pages/contact_page/contact.css";
-import "./components/footer/footer.css";
-import Contact from "./pages/contact_page/contact";
+import { Routes, Route } from "react-router-dom";
 import Footer from "./components/footer/footer";
-import FaqPage from "./pages/Faq_page/faqPage";
+import HomeLayout from "./Layout/HomeLayout";
+import ArtistGallery from "./pages/artist_gallery/artist_gallery";
+
+import "./general.css";
+import "./components/footer/footer.css";
 export default function App() {
   return (
     <>
-      <Header />
-      <Landing />
-      <Artists />
-      <div className="faq-contact-box">
-        <FaqPage />
-        <Contact />
-      </div>
+      <Routes>
+        <Route path="/" element={<HomeLayout />} />
+        <Route path="/artist-Gallery/:id" element={<ArtistGallery />} />
+      </Routes>
       <Footer />
     </>
   );

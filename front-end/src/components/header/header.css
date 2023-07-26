@@ -1,7 +1,9 @@
 .nav-bar_container {
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   height: 10vh;
+  width: 100vw;
   background-color: var(--secondary-bg-color);
   align-items: center;
   padding: 1rem;
@@ -16,8 +18,30 @@
   font-size: clamp(1.75rem, 4vw, 4rem);
 }
 
-@media screen and (min-width: 960px) {
-  .nav-bar_container {
-    padding: 4rem;
-  }
+/* Desktop header styles */
+.desktop-header-box {
+  display: flex;
+  gap: 2rem;
+  width: 40vw;
+  max-width: 600px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.headerBtn {
+  width: fit-content;
+  height: 100%;
+  margin: 0;
+  padding: 1rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  background-color: transparent;
+  border: transparent;
+}
+
+.headerBtn:hover {
+  background-color: var(--dark-font);
+  color: var(--accent);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  height: 100%;
 }
