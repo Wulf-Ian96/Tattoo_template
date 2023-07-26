@@ -1,26 +1,5 @@
 .footer-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  height: 10vh;
+  height: 5vh;
   background-color: var(--secondary-bg-color);
-  font-size: clamp(0.2rem, 3vw, 2rem);
-}
-
-.copyright {
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-  font-size: clamp(0.5rem, 3vw, 2rem);
-}
-
-.icon-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(1rem, 7vw, 5rem);
-  height: 100%;
-  width: 20vw;
-  font-size: clamp(0.4rem, 4vw, 2rem);
 }

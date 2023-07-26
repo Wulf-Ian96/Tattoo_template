@@ -2,17 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Handlee", cursive;
 }
 
 :root {
   /* palette */
-  --main-bg-color: rgb(36, 26, 25);
-  --secondary-bg-color: #d0926b;
+  --main-bg-color: #241a19;
+  --secondary-bg-color: #d0916b;
 
   --light-font: #e3cfba;
   --light-font-50: #e3cfba23;
-  --dark-font: rgb(36, 26, 25);
+  --dark-font: #241a19;
 
   --accent: #a58675;
   /* standard alignments */
@@ -21,15 +20,7 @@
 
 .flex-container {
   display: flex;
-  width: fit-content;
   flex-direction: row;
-  align-items: flex-start;
-
+  justify-content: space-between;
   padding: 1rem;
-  gap: 3rem;
-  margin-bottom: 1rem;
-}
-
-.bold {
-  font-weight: bolder;
 }

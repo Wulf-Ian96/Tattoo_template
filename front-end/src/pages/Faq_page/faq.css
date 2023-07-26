@@ -6,54 +6,33 @@
   background-color: var(--main-bg-color);
   color: var(--light-font);
 }
-.modal-container {
-  height: fit-content;
-}
+
 .faq-title {
   font-size: clamp(3rem, 4vw, 5rem);
   margin: 2rem 0;
 }
 
 .faq-item {
-  position: relative;
-  margin: 1rem auto;
+  margin: 1rem 0;
   background-color: var(--light-font-50);
   padding: 0.5rem 1rem;
   border-radius: 10px;
-  display: flex !important;
-  justify-content: space-between;
-  width: 80vw;
-  max-width: 600px;
 }
 .faq-question {
   margin-right: 1rem;
-  font-size: clamp(1.2rem, 4vw, 2rem);
+  font-size: clamp(1.5rem, 4vw, 3rem);
 }
-.faq-answer {
-  letter-spacing: 1.4px;
-  font-size: clamp(1rem, 2vw, 1.5rem);
-}
+
 .faq-btn {
-  background-color: none;
+  background-color: var(--light-font);
   border: none;
-  background: none;
-
+  width: 10px;
   border-radius: 20px;
-}
-
-.faq-modal {
-  width: 80vw;
-  background-color: var(--light-font-50);
-  padding: 0.75rem;
-  letter-spacing: 1.2px;
-}
-.hidden {
-  display: none;
 }
 
 @media screen and (min-width: 960px) {
   .faq-container {
-    height: fit-content;
+    height: 100vh;
     width: 50vw;
     display: flex;
     justify-content: center;
@@ -61,6 +40,5 @@
   .faq-contact-box {
     display: flex;
     align-items: center;
-    background-color: var(--main-bg-color);
   }
 }

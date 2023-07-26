@@ -5,14 +5,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   position: relative;
   color: var(--light-font);
 }
 
 .landing-title {
   padding: 1rem;
-  font-size: clamp(2.5rem, 4vw, 5rem);
+  font-size: clamp(3rem, 4vw, 5rem);
   color: var(--light-font);
   z-index: 1;
 }
@@ -29,25 +28,20 @@
 }
 
 .landing-about {
-  font-size: clamp(1.2rem, 4vw, 2rem);
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
   line-height: 1.6;
   letter-spacing: 1px;
   padding: 1rem;
-  justify-self: flex-end;
-  max-width: 1000px;
 }
 
 .landing-btn {
-  background-color: var(--light-font);
+  background-color: var(--secondary-bg-color);
   border: none;
-  height: 40px;
+  height: 20px;
   width: 40px;
-  border-radius: 50%;
-  align-self: center;
 }
 .button-desc {
-  font-size: clamp(1.1rem, 4vw, 2.5rem);
-  align-self: center;
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
 }
 @media screen and (min-width: 960px) {
   .landing-container {
