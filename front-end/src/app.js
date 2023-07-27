@@ -13,6 +13,7 @@ import FaqPage from "./pages/Faq_page/faqPage";
 export default function App() {
   return (
     <>
+<<<<<<< Updated upstream
       <Header />
       <Landing />
       <Artists />
@@ -21,6 +22,12 @@ export default function App() {
         <Contact />
       </div>
       <Footer />
+=======
+      <Routes>
+        <Route path="/" element={<HomeLayout />} />
+        <Route path="/artist-Gallery/:id" element={<ArtistGallery />} />
+      </Routes>
+>>>>>>> Stashed changes
     </>
   );
 }
