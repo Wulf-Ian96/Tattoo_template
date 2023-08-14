@@ -1,0 +1,36 @@
+.consult-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 75vw;
+  width: 100%;
+  height: 90vh;
+  overflow: scroll;
+}
+.page-title {
+  font-size: 1.5rem;
+  border-bottom: 2px solid black;
+}
+.consult-artist {
+  align-self: center;
+  margin-top: 1rem;
+}
+.consult-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.consult-span {
+  font-weight: bolder;
+}
+
+.consult-item-container {
+  background-color: rgba(0, 0, 0, 0.062);
+  width: 80%;
+  padding: 1rem 0.5rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  box-shadow: #473938 0px 2px 4px, #473938 0px 7px 13px -3px,
+    #473938 0px -3px 0px inset;
+}

@@ -2,39 +2,37 @@ import React from "react";
 import img1 from "../../assets/images/landing.jpg";
 import Button from "../buttons/button";
 
-export default function Artist_card() {
-  const artistDb = [
-    {
-      name: "Tom Holland",
-      desc: ` My journey as an artist has taken me through various styles and
-  techniques, allowing me to develop a diverse skill set that caters to a
-  wide range of preferences. Whether you're drawn to bold and vibrant
-  designs, intricate black and gray masterpieces, or anything in between,
-  I am here to collaborate with you and bring your vision to life.`,
-      artistImg: img1,
-      artistId: 1,
-    },
-    {
-      name: "Drew Daniel",
-      desc: ` My journey as an artist has taken me through various styles and
-  techniques, allowing me to develop a diverse skill set that caters to a
-  wide range of preferences. Whether you're drawn to bold and vibrant
-  designs, intricate black and gray masterpieces, or anything in between,
-  I am here to collaborate with you and bring your vision to life.`,
-      artistImg: img1,
-      artistId: 2,
-    },
-  ];
+import { Link } from "react-router-dom";
+
+export default function Artist_card({ artists }) {
+  console.log(artists.artists);
+  const artistDb = artists.artists;
   return (
     <>
       {artistDb.map((artist) => (
-        <div className="card-container">
-          <img className="artist_avatar" src={artist.artistImg} />
+        <div className="card-container" key={artist.id}>
+          <img className="artist_avatar" src={img1} alt="headshot" />
           <h2 className="artist-name">Hi, I'm {artist.name}</h2>
           <p className="artist-description">{artist.desc}</p>
           <div className="button-container">
-            <Button name="View Gallery" artistId={artist.artistId} />
-            <Button name="Book Now!" />
+            <Link
+              className="button-1"
+              to={`/artist-gallery/${artist.id}`}
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
+            >
+              View Gallery
+            </Link>
+            <Link
+              className="button-1"
+              to={`/BookNow`}
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
+            >
+              Book Now!
+            </Link>
           </div>
         </div>
       ))}{" "}

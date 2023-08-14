@@ -7,15 +7,18 @@
 
 :root {
   /* palette */
-  --main-bg-color: rgb(36, 26, 25);
-  --secondary-bg-color: #d0926b;
+  --main-bg-color: #241a19;
+  --secondary-bg-color: rgb(208, 146, 107);
 
   --light-font: #e3cfba;
   --light-font-50: #e3cfba23;
   --dark-font: rgb(36, 26, 25);
-
+  font-size: 16px;
   --accent: #a58675;
   /* standard alignments */
+
+  /* Font sizes */
+  --sma-font: 0.8rem;
 }
 /* containers */
 

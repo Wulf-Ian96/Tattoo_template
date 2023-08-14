@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import Landing from "../pages/landing";
 import Artists from "../pages/artists_page/artists";
 import "../components/artist_card/cardStyles.css";
@@ -13,8 +14,8 @@ import FaqPage from "../pages/Faq_page/faqPage";
 
 import useWindowDimensions from "../util_functions/windowTrack";
 import scrollToSection from "../util_functions/scrollToSection";
-export default function HomeLayout() {
-  const { width, height } = useWindowDimensions();
+export default function HomeLayout({ artists }) {
+  const { width } = useWindowDimensions();
 
   const artistRef = useRef();
   const FaqRef = useRef();
@@ -27,9 +28,9 @@ export default function HomeLayout() {
     <nav className="nav-bar_container">
       <h1 className="nav-title">The Tattoo Shop</h1>
       <div className="desktop-header-box">
-        <button onClick={artistClick} className="button-1">
+        <Link to="/BookNow" class="button-1">
           Book Now!
-        </button>
+        </Link>
         <button onClick={artistClick} className="button-1">
           Artists
         </button>
@@ -55,10 +56,10 @@ export default function HomeLayout() {
           </label>
 
           <nav class="menu1">
-            <a class="link1" href="">
+            <Link to="/BookNow" class="link1">
               Book Now!
-            </a>
-            <a class="link1" href="">
+            </Link>
+            <a class="link1" href="/">
               Home
             </a>
             <button onClick={artistClick} class="link1" href="">
@@ -79,7 +80,7 @@ export default function HomeLayout() {
 
       <Landing />
       <div ref={artistRef}>
-        <Artists />
+        <Artists artists={artists} />
       </div>
       <div ref={FaqRef} className="faq-contact-box">
         <FaqPage />

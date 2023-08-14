@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-  height: 10vh;
+  height: 5vh;
   background-color: var(--secondary-bg-color);
   font-size: clamp(0.2rem, 3vw, 2rem);
 }

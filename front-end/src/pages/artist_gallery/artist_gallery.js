@@ -1,33 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./artist_gallery.css";
-import Footer from "../../components/footer/footer";
+import { useParams } from "react-router-dom";
 import img1 from "../../assets/images/landing.jpg";
-import getWindowDimensions from "../../util_functions/windowTrack";
+import { database } from "../../firebase";
+import { getDoc, doc } from "firebase/firestore";
 export default function Artist_gallery() {
-  const artistDb = [
-    {
-      name: "Tom Holland",
-      desc: ` My journey as an artist has taken me through various styles and
-  techniques, allowing me to develop a diverse skill set that caters to a
-  wide range of preferences. Whether you're drawn to bold and vibrant
-  designs, intricate black and gray masterpieces, or anything in between,
-  I am here to collaborate with you and bring your vision to life.`,
-      artistImg: img1,
-      artistId: 1,
-    },
-    {
-      name: "Drew Daniel",
-      desc: ` My journey as an artist has taken me through various styles and
-  techniques, allowing me to develop a diverse skill set that caters to a
-  wide range of preferences. Whether you're drawn to bold and vibrant
-  designs, intricate black and gray masterpieces, or anything in between,
-  I am here to collaborate with you and bring your vision to life.`,
-      artistImg: img1,
-      artistId: 2,
-    },
-  ];
-  const { height } = getWindowDimensions();
+  const [currArtist, setCurrentArtist] = useState({});
+  // here we grab the route parama with the id
+  const Artistid = useParams();
+  // make a reference to the document in the database ie) the artist with the id
+  const artistRef = doc(database, "artists", Artistid.id);
+  // grab the data from the db and set it to state varaiable
+  getDoc(artistRef).then((doc) => {
+    setCurrentArtist(doc.data(), doc.id);
+  });
 
   return (
     <>
@@ -42,22 +29,20 @@ export default function Artist_gallery() {
             <p>back</p>
           </Link>
         </div>
-        {artistDb.map((artist) => (
-          <section className="gallery-container">
-            <h1 className="gallery-title">{artist.name}</h1>
-            <div className="img-grid">
-              <img src="https://source.unsplash.com/random/300×300" />
-              <img src="https://source.unsplash.com/random/300×300" />
-              <img src="https://source.unsplash.com/random/300×300" />
-              <img src="https://source.unsplash.com/random/300×300" />
-              <img src="https://source.unsplash.com/random/300×300" />
-              <img src="https://source.unsplash.com/random/300×300" />
-              <img src="https://source.unsplash.com/random/300×300" />
-            </div>
-          </section>
-        ))}
+
+        <section className="gallery-container">
+          <h1 className="gallery-title">{currArtist.name}</h1>
+          <div className="img-grid">
+            <img src="https://source.unsplash.com/random/300×300" />
+            <img src="https://source.unsplash.com/random/300×300" />
+            <img src="https://source.unsplash.com/random/300×300" />
+            <img src="https://source.unsplash.com/random/300×300" />
+            <img src="https://source.unsplash.com/random/300×300" />
+            <img src="https://source.unsplash.com/random/300×300" />
+            <img src="https://source.unsplash.com/random/300×300" />
+          </div>
+        </section>
       </main>
-      <Footer />
     </>
   );
 }

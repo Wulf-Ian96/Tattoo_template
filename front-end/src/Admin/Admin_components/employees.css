@@ -1,0 +1,60 @@
+.img-title {
+  margin-top: 2rem;
+}
+
+.admin-btn {
+  width: 20%;
+  min-height: 4vh;
+
+  height: auto;
+  font-size: 0.6rem;
+}
+.admin_btn-container {
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.add-form {
+  height: 50vh;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.employee-info {
+  min-height: 20vh;
+  height: fit-content;
+
+  display: block;
+  align-self: center;
+
+  width: 90%;
+}
+.employee-form-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  padding: 0.5rem;
+  width: 100%;
+}
+.employee-input {
+  padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+
+  border: 1px solid var(--dark-font);
+  border-radius: 1px;
+}
+.employee-input:disabled {
+  border: none;
+  border-bottom: 1px solid var(--dark-font);
+}
+.employee-input:focus {
+  border: none;
+  outline: 2px solid var(--secondary-bg-color);
+}
+.textarea {
+  min-height: 20vh;
+}
